@@ -56,15 +56,9 @@ echo '/" title="Visitar magento "> '$ip >> $reporte
 echo ' </a></b></td></tr><tr><td style="width:150px; height:30px">Tamaño Home<td style="width:150px; height:30px"><b>'$peso>> $reporte
 echo '</b></td></tr><tr><td colspan=2 style="width:150px; height:30px">Correo Enviado automaticamente desde servidor Magento Movilnet</td></tr></table></center></section></nav></center>'>> $reporte
 mutt -s "Reporte mañana de $FECHA" principalcount2013@gmail.com < $reporte
-
-#
-#
-#mutt -s "Reporte mañana de $FECHA" jcastr05@cantv.com.ve < $reporte
-#mutt -s "Reporte mañana de $FECHA" racost01@cantv.com.ve < $reporte
-#mutt -s "Reporte mañana de $FECHA" jquija03@cantv.com.ve < $reporte
-#
-#
-
+mutt -s "Reporte mañana de $FECHA" jcastr05@cantv.com.ve < $reporte
+mutt -s "Reporte mañana de $FECHA" racost01@cantv.com.ve < $reporte
+mutt -s "Reporte mañana de $FECHA" jquija03@cantv.com.ve < $reporte
 echo " Correo enviado con exito. ";
 echo "-----------------------------------------";
 #//////////////////////////////////////////////////////////////////////////////
