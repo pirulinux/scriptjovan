@@ -12,9 +12,6 @@
 ipanterior=""
 while true ; do
 
-		chmod 755  $carpeta_personal
-
-
 ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
 
 ##comienso del if
@@ -53,7 +50,6 @@ echo
 echo " ENVIANDO CORREO A USUARIO(S) ";
 echo '<center><nav class="contenedor" style="position-absolute;top:100px; width:500px; height:300px; background:white; border-radius:15px;"><secctio class="contenedor2"><center><table style=" border:1px orange ridge; border-radius:15px; width: 400px; box-shadow: -6px -1px 8px rgba(0, 0, 0,0.80); -moz-box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.80); -webkit-box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.80);"><tr><td style="width:150px; height:30px"><img src="http://upload.wikimedia.org/wikipedia/commons/3/3e/Logo_Movilnet.JPG"></td><td><img src="http://enterprise.magento.com/sites/all/themes/mag_redesign/images/logos/logo-gl-footer.png"></td></tr><tr><td style="width:150px; height:30px">Dirección<td style="width:150px; height:30px"><b><a href="http://'$ip> $reporte
 echo '/" title="Visitar magento "> '$ip >> $reporte
-echo ' </a></b></td></tr><tr><td style="width:150px; height:30px">Tamaño Home<td style="width:150px; height:30px"><b>'$peso>> $reporte
 echo '</b></td></tr><tr><td colspan=2 style="width:150px; height:30px">Correo Enviado automaticamente desde servidor Magento Movilnet</td></tr></table></center></section></nav></center>'>> $reporte
 mutt -s "Reporte mañana de $FECHA" principalcount2013@gmail.com < $reporte
 
@@ -73,7 +69,7 @@ echo "-----------------------------------------";
 fi
 #fin del if
 
-sleep 10h
+sleep 1m
 #20m es el tiempo que tarda entre ejecuciones puedes usar 12h 12345s o como gustes
 
 done
