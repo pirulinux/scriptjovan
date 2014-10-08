@@ -8,15 +8,16 @@
 # Short-Description: Manda ip a mysql y correo
 # Description: Manda ip a mysql y correo### END INIT INFO
 
-ipanterior=""
+ipanterior="";
 while true ; do
 ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
 
 ##comienso del if
-if [ $ip=!$ipanterior ]; then
+
+if [ $ip =! $ipanterior ]; then
 ##comienso del if
 
-$ipanterior=$ip
+$ipanterior=$ip;
 ##comienso del if
 
 consulta="UPDATE magento.core_config_data SET value = 'http://$ip/' WHERE core_config_data.config_id =7;"
