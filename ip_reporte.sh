@@ -9,7 +9,19 @@
 # Description: Manda ip a mysql y correo
 ### END INIT INFO
 while true ; do
+
+		chmod 755  $carpeta_personal
+
+
 ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
+
+##comienso del if
+if [ $ip=!$ipanterior ]; then
+##comienso del if
+
+ipanterior=$ip
+##comienso del if
+
 consulta="UPDATE magento.core_config_data SET value = 'http://$ip/' WHERE core_config_data.config_id =7;"
 dia=`date +%d`;
 mes=`date +%m`;
@@ -49,6 +61,10 @@ echo " Correo enviado con exito. ";
 echo "-----------------------------------------";
 #//////////////////////////////////////////////////////////////////////////////
 #fin del bucle infinito
+#fin del if
+fi
+#fin del if
+
 sleep 10h
 #20m es el tiempo que tarda entre ejecuciones puedes usar 12h 12345s o como gustes
 
