@@ -6,13 +6,10 @@
 # Default-Start: 2 3 4 5
 # Default-Stop: 0 1 6
 # Short-Description: Manda ip a mysql y correo
-# Description: Manda ip a mysql y correo
-### END INIT INFO
+# Description: Manda ip a mysql y correo### END INIT INFO
 
 ipanterior=""
 while true ; do
-
-		chmod 755  $carpeta_personal
 
 
 ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
