@@ -10,11 +10,6 @@
 
 ipanterior=""
 while true ; do
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a7f7cbcbe81130c737998ef01798414d44cf45e
 ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
 
 ##comienso del if
