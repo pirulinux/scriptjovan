@@ -13,6 +13,8 @@ while true ; do
 #ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
 ##comienso del if
 
+$ip="1";
+
 if [ $ip != $ipanterior ]; then
 ##comienso del if
 read ip;
