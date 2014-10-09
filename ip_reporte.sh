@@ -11,7 +11,6 @@
 ipanterior="no"
 while true ; do
 #ip=`ifconfig eth | grep -oiE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255`
-ip='0';
 ##comienso del if
 
 if [ $ip != $ipanterior ]; then

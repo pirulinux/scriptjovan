@@ -17,7 +17,7 @@ ip='0';
 if [ $ip != $ipanterior ]; then
 ##comienso del if
 read ip;
-$ipanterior="$ip"
+$ipanterior=`$ip`
 ##comienso del if
 
 consulta="UPDATE magento.core_config_data SET value = 'http://$ip/' WHERE core_config_data.config_id =7;"
